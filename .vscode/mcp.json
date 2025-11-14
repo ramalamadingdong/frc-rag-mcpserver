@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"WPILibRag": {
+			"url": "http://97.139.150.106:3000",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}

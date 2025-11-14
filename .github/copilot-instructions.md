@@ -11,7 +11,7 @@ This is a WPILib robotics project for FRC (FIRST Robotics Competition).
 ## Critical Instructions for Copilot
 **IMPORTANT**: Whenever the user asks about robot code, WPILib, FRC programming, robot commands, subsystems, autonomous routines, or anything related to WPILib functionality:
 - **ALWAYS query the WPILib MCP Server first** using the available MCP tools
-- Use the `mcp_wpilib-rag_query_wpilib_docs` tool to retrieve accurate, version-specific documentation
+- Use the `mcp_wpilibrag_query_wpilib_docs` tool from the WPILibRag server to retrieve accurate, version-specific documentation
 - Base all WPILib-related answers on the official documentation from the MCP server
 - Verify WPILib syntax, class names, and methods against the retrieved documentation
 - Do not rely solely on training data for WPILib-specific questions
