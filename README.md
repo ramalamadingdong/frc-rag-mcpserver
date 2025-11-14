@@ -127,7 +127,7 @@ Add the following content to `.github/copilot-instructions.md`:
 This is a WPILib robotics project for FRC (FIRST Robotics Competition).
 
 ### Project Configuration
-- **WPILib Version**: 2025.1.1
+- **WPILib Version**: 2025.3.2
 - **Programming Language**: Java (or C++/Python)
 - **Target Platform**: FRC Robot (roboRIO)
 
