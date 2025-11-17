@@ -123,56 +123,61 @@ Add the following content to `.github/copilot-instructions.md`:
 ```markdown
 # GitHub Copilot Instructions
 
+⚠️ **CRITICAL - READ THIS FIRST** ⚠️
+═══════════════════════════════════════════════════════════════════════════════
+
+🛑 **MANDATORY REQUIREMENT - NO EXCEPTIONS** 🛑
+
+Before answering ANY question about:
+- WPILib APIs, classes, methods, or syntax
+- Robot code (commands, subsystems, autonomous)
+- FRC programming patterns or best practices
+- Command-based programming
+- Any WPILib framework functionality
+
+YOU MUST:
+1. **STOP** - Do not answer from memory or training data
+2. **QUERY** - Use `mcp_wpilibrag_query_wpilib_docs` tool FIRST
+3. **VERIFY** - Base your answer on the retrieved documentation
+4. **CITE** - Reference the official WPILib documentation
+
+This is NOT optional. This is a MANDATORY step for ALL WPILib-related questions.
+
+═══════════════════════════════════════════════════════════════════════════════
+
 ## Project Context
 This is a WPILib robotics project for FRC (FIRST Robotics Competition).
 
 ### Project Configuration
-- **WPILib Version**: 2025.3.2
-- **Programming Language**: Java (or C++/Python)
+- **WPILib Version**: [SPECIFY VERSION HERE - e.g., 2025.1.1]
+- **Programming Language**: [SPECIFY LANGUAGE HERE - Java/C++/Python]
 - **Target Platform**: FRC Robot (roboRIO)
 
-## Critical Instructions for Copilot
-**IMPORTANT**: Whenever the user asks about robot code, WPILib, FRC programming, 
-robot commands, subsystems, autonomous routines, or anything related to WPILib functionality:
-- **ALWAYS query the WPILib MCP Server first** using the available MCP tools
-- Use the `mcp_wpilibrag_query_wpilib_docs` tool from the WPILibRag server to retrieve accurate, version-specific documentation
-- Base all WPILib-related answers on the official documentation from the MCP server
-- Verify WPILib syntax, class names, and methods against the retrieved documentation
-- Do not rely solely on training data for WPILib-specific questions
+## WPILib RAG Server Usage
+- **Tool Name**: `mcp_wpilibrag_query_wpilib_docs`
+- **When to Use**: ALWAYS for any WPILib-related question (see mandatory requirement above)
+- **Parameters**: 
+  - `question`: The user's question
+  - `version`: WPILib version (default: "2025")
+  - `language`: "Java", "Python", "C++", or "API Reference"
 
 ## Preferences
 - Follow WPILib best practices and conventions
-- Use command-based programming paradigm
-- Implement proper subsystem organization
-- Include error handling and logging
+- Use appropriate design patterns for robot code (Command-based, subsystems, etc.)
+- Ensure thread safety when necessary
+- Include proper error handling and logging
 - Reference official WPILib documentation for all framework-specific code
 
 ## Code Style
 - Write clear, maintainable code
-- Add comments for complex logic
+- Add comments for complex logic but avoid over-commenting
 - Use descriptive variable and method names
 - Follow FRC/WPILib naming conventions
+
+## Additional Notes
+- Remember to consider real-time constraints for robot code
+- Always consider competition requirements and rules
 ```
-
-### 5. Verify the Setup
-
-1. **Restart VS Code** to ensure all configurations are loaded
-2. Open GitHub Copilot Chat (Ctrl+Alt+I or Cmd+Alt+I)
-3. Ask a WPILib question: "How do I create a drivetrain subsystem in WPILib?"
-4. Copilot should query the MCP server and provide documentation-based answers
-
-### 6. Testing MCP Server Connectivity
-
-You can verify the MCP server is working by asking Copilot:
-
-- "What's the latest WPILib version available?"
-- "Show me how to use PIDController in WPILib"
-- "What languages are available in the WPILib documentation?"
-
-Copilot will use the MCP tools to query the documentation server.
-
-## How It All Works Together
-
 ```
 ┌─────────────────┐
 │   Your Code     │

@@ -1,5 +1,27 @@
 # GitHub Copilot Instructions
 
+⚠️ **CRITICAL - READ THIS FIRST** ⚠️
+═══════════════════════════════════════════════════════════════════════════════
+
+🛑 **MANDATORY REQUIREMENT - NO EXCEPTIONS** 🛑
+
+Before answering ANY question about:
+- WPILib APIs, classes, methods, or syntax
+- Robot code (commands, subsystems, autonomous)
+- FRC programming patterns or best practices
+- Command-based programming
+- Any WPILib framework functionality
+
+YOU MUST:
+1. **STOP** - Do not answer from memory or training data
+2. **QUERY** - Use `mcp_wpilibrag_query_wpilib_docs` tool FIRST
+3. **VERIFY** - Base your answer on the retrieved documentation
+4. **CITE** - Reference the official WPILib documentation
+
+This is NOT optional. This is a MANDATORY step for ALL WPILib-related questions.
+
+═══════════════════════════════════════════════════════════════════════════════
+
 ## Project Context
 This is a WPILib robotics project for FRC (FIRST Robotics Competition).
 
@@ -8,13 +30,13 @@ This is a WPILib robotics project for FRC (FIRST Robotics Competition).
 - **Programming Language**: [SPECIFY LANGUAGE HERE - Java/C++/Python]
 - **Target Platform**: FRC Robot (roboRIO)
 
-## Critical Instructions for Copilot
-**IMPORTANT**: Whenever the user asks about robot code, WPILib, FRC programming, robot commands, subsystems, autonomous routines, or anything related to WPILib functionality:
-- **ALWAYS query the WPILib MCP Server first** using the available MCP tools
-- Use the `mcp_wpilibrag_query_wpilib_docs` tool from the WPILibRag server to retrieve accurate, version-specific documentation
-- Base all WPILib-related answers on the official documentation from the MCP server
-- Verify WPILib syntax, class names, and methods against the retrieved documentation
-- Do not rely solely on training data for WPILib-specific questions
+## WPILib RAG Server Usage
+- **Tool Name**: `mcp_wpilibrag_query_wpilib_docs`
+- **When to Use**: ALWAYS for any WPILib-related question (see mandatory requirement above)
+- **Parameters**: 
+  - `question`: The user's question
+  - `version`: WPILib version (default: "2025")
+  - `language`: "Java", "Python", "C++", or "API Reference"
 
 ## Preferences
 - Follow WPILib best practices and conventions
