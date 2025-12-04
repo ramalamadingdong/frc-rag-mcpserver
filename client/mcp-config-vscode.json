@@ -1,0 +1,12 @@
+{
+  "mcp": {
+    "servers": {
+      "wpilib-rag": {
+        "command": "C:\\path\\to\\wpilib-rag-server\\wpilib-rag-server.exe",
+        "env": {
+          "VOYAGE_API_KEY": "your-voyage-api-key-here"
+        }
+      }
+    }
+  }
+}
